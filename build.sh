@@ -1,5 +1,6 @@
 #!/bin/sh
 make clean;
 ./autogen;
-./configure;
-make && make install;
+./configure CXXFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib;
+make CXXFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib &&
+make install CXXFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib;
