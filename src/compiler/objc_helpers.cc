@@ -490,7 +490,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
                 "\" length:" + SimpleItoa(field->default_value_string().length()) +
                 "]";
             } else {
-              return "[NSData data]";
+              return "nil";
             }
           } else {
             if (AllAscii(field->default_value_string())) {
