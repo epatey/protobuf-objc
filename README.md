@@ -2,21 +2,21 @@
 
    1. Make sure xcode command line tools are installed `xcode-select --install`
 
-   2.`git clone git@github.com:talko/protobuf-objc.git`
+   2. `git clone git@github.com:talko/protobuf-objc.git`
    
-   3.`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+   3. `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
    
-   4.`brew install automake`
+   4. `brew install automake`
    
-   5.`brew install libtool`
+   5. `brew install libtool`
    
-   5.`brew install protobuf`
+   6. `brew install protobuf`
    
-   6. `cd protobuf-objc`
+   7. `cd protobuf-objc`
    
-   7. `git checkout talko`
+   8. `git checkout talko`
 
-   8.`./build.sh`
+   9. `./build.sh`
 
 #Compile ".proto" files. 
    `protoc --plugin=/usr/local/bin/protoc-gen-objc person.proto --objc_out="./"`
