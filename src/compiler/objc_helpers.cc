@@ -493,15 +493,20 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
               return "nil";
             }
           } else {
-            if (AllAscii(field->default_value_string())) {
-              return "@\"" +
-                EscapeTrigraphs(CEscape(field->default_value_string())) +
-                "\"";
-            } else {
-              return
-                "[NSString stringWithUTF8String:\"" +
-                EscapeTrigraphs(CEscape(field->default_value_string())) +
-                "\"]";
+            if (field->has_default_value()) {
+              if (AllAscii(field->default_value_string())) {
+                return "@\"" +
+                  EscapeTrigraphs(CEscape(field->default_value_string())) +
+                  "\"";
+              } else {
+                return
+                  "[NSString stringWithUTF8String:\"" +
+                  EscapeTrigraphs(CEscape(field->default_value_string())) +
+                  "\"]";
+              }
+            }
+            else {
+              return "nil";
             }
           }
         case FieldDescriptor::CPPTYPE_ENUM:
