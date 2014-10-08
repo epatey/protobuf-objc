@@ -1,12 +1,12 @@
 # Install Protocol Buffers for Objective-C, only for ARC projects
 
-   1.`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+   1.`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
    
    2.`brew install automake`
    
    3.`brew install libtool`
    
-   4.`brew instal protobuf`
+   4.`brew install protobuf`
 
    5.`git clone git@github.com:alexeyxo/protobuf-objc.git`
    
