@@ -1,16 +1,20 @@
 # Install Protocol Buffers (2.5.0) for Objective-C, only for ARC projects
 
-1. Make sure xcode command line tools are installed `xcode-select --install`
-1. `git clone git@github.com:talko/protobuf-objc.git`
-1. `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-1. `brew install automake`
-1. `brew install libtool`
-1. `cd $(brew --prefix)`
-1. `git checkout e2d162d /usr/local/Library/Formula/protobuf.rb`
-1. `brew install protobuf`
-1. `cd ~\dev\protobuf-objc`
-1. `git checkout talko`
-1. `./build.sh`
+```bash
+# Make sure xcode command line tools are installed
+xcode-select --install
+
+# Setup + Install Protocol Buffers
+git clone git@github.com:talko/protobuf-objc.git
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install automake
+brew install libtool
+brew install protobuf250
+cd ~\dev\protobuf-objc
+git checkout talko
+./build.sh
+```
+
 
 #Compile ".proto" files.
 ```bash
